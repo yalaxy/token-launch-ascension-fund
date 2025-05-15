@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
-import { Telegram, Twitter, Discord, Github, Send } from "lucide-react";
+import { Twitter, Github, Send, MessageSquare, MessagesSquare } from "lucide-react";
 
 const Footer = () => {
   const { toast } = useToast();
@@ -41,8 +41,8 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <SocialLink href="#" icon={<Twitter className="h-5 w-5" />} />
-              <SocialLink href="#" icon={<Discord className="h-5 w-5" />} />
-              <SocialLink href="#" icon={<Telegram className="h-5 w-5" />} />
+              <SocialLink href="#" icon={<MessagesSquare className="h-5 w-5" />} />
+              <SocialLink href="#" icon={<MessageSquare className="h-5 w-5" />} />
               <SocialLink href="#" icon={<Github className="h-5 w-5" />} />
             </div>
           </div>
