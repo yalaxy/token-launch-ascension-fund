@@ -1,4 +1,5 @@
-import type { Config } from "tailwindcss";
+
+import type { Config } from "tailwind-css";
 
 export default {
 	darkMode: ["class"],
@@ -61,7 +62,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+                // Custom colors for our token launch site
+                crypto: {
+                    "dark-blue": "#0F172A",
+                    "blue": "#4F46E5",
+                    "purple": "#8B5CF6",
+                    "teal": "#06B6D4",
+                    "light-blue": "#38BDF8",
+                    "indigo": "#4338CA",
+                    "pink": "#E879F9",
+                }
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,12 +95,34 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'pulse-slow': {
+                    '0%, 100%': {
+                        opacity: '1'
+                    },
+                    '50%': {
+                        opacity: '0.7'
+                    }
+                },
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)'
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)'
+                    }
+                }
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'pulse-slow': 'pulse-slow 4s infinite ease-in-out',
+                'float': 'float 6s infinite ease-in-out'
+			},
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'hero-pattern': 'linear-gradient(to right, #4F46E5, #8B5CF6, #06B6D4)',
+            }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
